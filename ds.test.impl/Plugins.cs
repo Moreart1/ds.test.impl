@@ -10,6 +10,7 @@ namespace ds.test.impl
     {
         private static List<IPlugin> pluginList;
 
+        //Конструктор
         static Plugins()
         {
             pluginList = new List<IPlugin>
@@ -22,6 +23,10 @@ namespace ds.test.impl
 
         public static int PluginsCount => pluginList.Count;
 
+        /// <summary>
+        /// Получить массив плагинов
+        /// </summary>
+        /// <returns>Массив плагинов</returns>
         public static string[] GetPluginNames()
         {
             List<string> pluginNames = new();
@@ -32,6 +37,11 @@ namespace ds.test.impl
             return pluginNames.ToArray();
         }
 
+        /// <summary>
+        /// Получить плагин
+        /// </summary>
+        /// <param name="pluginName">Имя плагина</param>
+        /// <returns>Плагин</returns>
         public static IPlugin GetPlugin(string pluginName) => pluginList.Find(plugin => plugin.PluginName == pluginName);
     }
 }

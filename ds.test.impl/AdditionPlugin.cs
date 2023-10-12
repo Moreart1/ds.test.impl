@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ds.test.impl
 {
+    
     internal class AdditionPlugin : PluginBase
     {
         public override string PluginName => "Сложение";
@@ -13,9 +14,12 @@ namespace ds.test.impl
         public override object GetImage() => null;
         public override string Description => "Плагин для сложения операций.";
 
-        public override int Run(int input1, int input2)
-        {
-            return input1 + input2;
-        }
+        /// <summary>
+        /// Метод сложения двух чисел
+        /// </summary>
+        /// <param name="input1">Первое число</param>
+        /// <param name="input2">Второе число</param>
+        /// <returns>Сложение двух чисел</returns>
+        public override int Run(int input1, int input2) => input1 + input2;
     }
 }

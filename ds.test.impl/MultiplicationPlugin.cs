@@ -13,9 +13,12 @@ namespace ds.test.impl
         public override object GetImage() => null;
         public override string Description => "Плагин для умножения операций.";
 
-        public override int Run(int input1, int input2)
-        {
-            return input1 * input2;
-        }
+        /// <summary>
+        /// Метод умножения двух чисел
+        /// </summary>
+        /// <param name="input1">Первое число</param>
+        /// <param name="input2">Второе число</param>
+        /// <returns>Умножение двух чисел</returns>
+        public override int Run(int input1, int input2) => input1 * input2;
     }
 }
